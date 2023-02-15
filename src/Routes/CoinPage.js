@@ -17,7 +17,7 @@ function CoinPage() {
         setCoin(response.data);
       }
     );
-  }, []);
+  });
   let history = useHistory();
   if (coin) {
     return (
