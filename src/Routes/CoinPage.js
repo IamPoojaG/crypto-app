@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import '../Routes/Styles/CoinPage.css';
 import BackgroundImg from '../Images/cryptobckg.jpeg';
-
+import { useHistory } from 'react-router-dom';
 function CoinPage() {
   let { id } = useParams();
   const [coin, setCoin] = useState(null);
@@ -18,7 +18,7 @@ function CoinPage() {
       }
     );
   }, []);
-
+  let history = useHistory();
   if (coin) {
     return (
       <div
@@ -68,7 +68,12 @@ function CoinPage() {
               </h3>
             </div>
           </div>
-          <Link to='/'>
+          <Link
+            onClick={() => {
+              history.push(`/`);
+              window.location.reload();
+            }}
+          >
             <div className='coinPage-RouteButton'>Go back</div>
           </Link>
         </div>

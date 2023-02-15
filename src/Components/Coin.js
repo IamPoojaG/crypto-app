@@ -30,6 +30,7 @@ const Coin = ({
             <button
               onClick={() => {
                 history.push(`/CoinPage/${id}`);
+                window.location.reload();
               }}
             >
               More Info
