@@ -42,7 +42,7 @@ function Home() {
             type='text'
             onChange={handleSearch}
           />
-          <img onClick={refreshPage} src={Refresh}></img>
+          <img onClick={refreshPage} src={Refresh} alt=' '></img>
         </div>
       </div>
       <div className='coinContainer'>
