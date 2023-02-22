@@ -3,7 +3,7 @@ import Axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import '../Routes/Styles/CoinPage.css';
-import BackgroundImg from '../Images/cryptobckg.jpeg';
+import BackgroundImg from '../Images/crypto.jpeg';
 import { useHistory } from 'react-router-dom';
 function CoinPage() {
   let { id } = useParams();
